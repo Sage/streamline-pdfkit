@@ -80,7 +80,7 @@ class PDFFont
             
     embedTTF: (_) ->
         data = @subset.encode()
-        compressedData = zlib.deflate(data, _)
+        compressedData = zlib.deflate(data, ~_)
         
         @fontfile = @document.ref
             Length: compressedData.length

@@ -3,7 +3,7 @@ PDFDocument - represents an entire PDF document
 By Devon Govett
 ###
 
-fs = require 'fs'
+fs = require 'streamline-fs'
 PDFObjectStore = require './store'
 PDFObject = require './object'
 PDFReference = require './reference'

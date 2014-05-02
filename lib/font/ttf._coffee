@@ -1,4 +1,4 @@
-fs = require 'fs'
+fs = require 'streamline-fs'
 Data = require '../data'
 DFont = require './dfont'
 Directory = require './directory'

@@ -1,4 +1,4 @@
-fs = require 'fs'
+fs = require 'streamline-fs'
 Data = '../data'
 
 class JPEG

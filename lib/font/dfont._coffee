@@ -1,4 +1,4 @@
-fs = require 'fs'
+fs = require 'streamline-fs'
 Data = require '../data'
 
 class DFont

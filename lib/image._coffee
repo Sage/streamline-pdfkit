@@ -3,7 +3,7 @@ PDFImage - embeds images in PDF documents
 By Devon Govett
 ###
 
-fs = require 'fs'
+fs = require 'streamline-fs'
 Data = require './data'
 JPEG = require './image/jpeg'
 PNG = require './image/png'

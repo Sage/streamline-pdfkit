@@ -1,4 +1,4 @@
-fs = require 'fs'
+fs = require 'streamline-fs'
 Data = '../data'
 zlib = require 'zlib'
 
@@ -163,7 +163,7 @@ class PNG
         return obj
         
     decodePixels: (_) ->
-        data = zlib.inflate @imgData, _
+        data = zlib.inflate @imgData, ~_
         pixelBytes = @pixelBitlength / 8
         scanlineLength = pixelBytes * @width
 
@@ -257,8 +257,8 @@ class PNG
                 imgData[p++] = pixel[i] for i in [0...colorByteSize]
                 alphaChannel[a++] = pixel[colorByteSize]
         
-        @imgData = zlib.deflate imgData, _
-        @alphaChannel = zlib.deflate alphaChannel, _
+        @imgData = zlib.deflate imgData, ~_
+        @alphaChannel = zlib.deflate alphaChannel, ~_
         
     decodePalette: ->
         palette = @palette
@@ -286,6 +286,6 @@ class PNG
                 pixel = pixel[0]
                 alphaChannel[i++] = palette[pixel][3]
             
-        @alphaChannel = zlib.deflate alphaChannel, _
+        @alphaChannel = zlib.deflate alphaChannel, ~_
         
 module.exports = PNG

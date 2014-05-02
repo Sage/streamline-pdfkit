@@ -30,8 +30,8 @@ module.exports =
             
         # Update the current position
         if x? or y?
-            @x = x or @x
-            @y = y or @y
+            @x = x if x != null
+            @y = y if y != null
         
         # wrap to margins if no x or y position passed
         else

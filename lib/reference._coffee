@@ -36,7 +36,7 @@ class PDFReference
                 # create a byte array instead of passing a string to the Buffer
                 # fixes a weird unicode bug.
                 data = new Buffer(data.charCodeAt(i) for i in [0...data.length])
-                compressedData = zlib.deflate(data, _)
+                compressedData = zlib.deflate(data, ~_)
                 @finalizedStream = compressedData.toString 'binary'
                 
                 @data.Filter = 'FlateDecode'

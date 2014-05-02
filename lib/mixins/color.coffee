@@ -32,8 +32,8 @@ module.exports =
        return this unless color
        
        @fillOpacity opacity if opacity?
-       color = color.join ' '
        op = if color.length is 4 then 'k' else 'rg'
+       color = color.join ' '
        @addContent "#{color} #{op}"
 
     strokeColor: (color, opacity) ->
@@ -41,8 +41,8 @@ module.exports =
        return this unless color
 
        @strokeOpacity opacity if opacity?
-       color = color.join ' '
        op = if color.length is 4 then 'K' else 'RG'
+       color = color.join ' '
        @addContent "#{color} #{op}"
        
     opacity: (opacity) ->
