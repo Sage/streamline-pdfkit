@@ -24,7 +24,7 @@ class TTFFont
         new TTFFont dfont.getNamedFont(family)
     
     constructor: (@rawData, name) ->
-        data = @contents = new Data(rawData)
+        data = @contents = new Data(@rawData)
         
         if data.readString(4) is 'ttcf'
             throw new Error "Must specify a font name for TTC files." if not name
