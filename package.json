@@ -2,7 +2,7 @@
   "name": "streamline-pdfkit",
   "description": "A PDF generation library for Node.js",
   "keywords": ["pdf", "pdf writer", "pdf generator", "graphics", "document", "vector"],
-  "version": "0.1.9",
+  "version": "0.1.10",
   "homepage": "http://devongovett.github.com/pdfkit/",
   "author": {
       "name": "Devon Govett",
@@ -15,8 +15,7 @@
   },
   "bugs": "https://github.com/Sage/streamline-pdfkit/issues",
   "dependencies": {
-      "coffee-script": "^1.10.0",
-      "flate": "^1.0.5"
+      "coffee-script": "^1.10.0"
   },
   "engine": [ "node >= v0.10.0" ]
 }
